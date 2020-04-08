@@ -9,7 +9,7 @@ async function isBlackListed(req, res, next) {
 
     if (await patientsService.isBlackListed(patient)) {
       console.log('is black listed.')
-      return res.status(401).end();
+      return res.status(200).end();
     }
 
     console.log('is NOT black listed.')
