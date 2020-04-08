@@ -1,4 +1,4 @@
-const { addPatient, getPatients } = require('./patients-controller');
+const { addPatient, getPatients } = require('./patients');
 
 module.exports = {
   addPatient,

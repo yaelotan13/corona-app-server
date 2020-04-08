@@ -1,4 +1,4 @@
-const { savePatient, getPatientByDistance, isBlackListed } = require('../services/patients-service');
+const { savePatient, getPatientByDistance, isBlackListed } = require('./patients');
 
 module.exports = {
   savePatient,

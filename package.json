@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "DEV=true node server.js",
+    "start": "DEV=true PORT=5555 node server.js",
     "deploy": "node server.js"
   },
   "dependencies": {
@@ -14,6 +14,7 @@
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "mongodb": "^3.5.5",
     "mongoose": "^5.9.6",
     "morgan": "~1.9.1",
     "node": "^13.11.0",
