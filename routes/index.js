@@ -1,4 +1,3 @@
-const routes = require('./patients-routes');
-const staticRoutes = require('./static-routes');
+const routes = require('./patients');
 
-module.exports = { routes, staticRoutes };
+module.exports = { routes };
