@@ -31,7 +31,7 @@ Express
 Docker
 
 # Authors
-This app is based on a group app made with the awsomes:
+This app is based on a group app made with the awesomes:
 
 Nir Shidlansik
 
