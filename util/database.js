@@ -29,5 +29,3 @@ module.exports = {
   mongoConnect,
   getDb
 }
-// exports.mongoConnect = mongoConnect;
-// exports.getDb = getDb;

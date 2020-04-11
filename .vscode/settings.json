@@ -1,0 +1,7 @@
+{
+    "appService.zipIgnorePattern": [
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/328f2021-e900-4c51-a542-907a77c4627f/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/corona-app-server",
+    "appService.deploySubpath": ""
+}
