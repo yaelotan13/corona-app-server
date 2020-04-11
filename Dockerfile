@@ -10,11 +10,9 @@ WORKDIR app/
 # Install dependencies (npm ci is similar to npm i, but for automated builds)
 RUN npm ci --only-production
 
-# Build production client side React application
-# RUN npm run build
-
 # Listen on the specified port
 EXPOSE 5000
 
+ARG ENV
 # Set Node server
-ENTRYPOINT npm run deploy
+ENTRYPOINT if [ "$ENV" = "production" ] ; then npm run deploy ; else npm start; fi 

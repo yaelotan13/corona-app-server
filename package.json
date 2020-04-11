@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "DEV=true PORT=5555 node server.js",
-    "deploy": "node server.js"
+    "start": "DEV=development nodemon server.js",
+    "deploy": "DEV=production node server.js"
   },
   "dependencies": {
     "body-parser": "latest",
@@ -19,5 +19,8 @@
     "morgan": "~1.9.1",
     "node": "^13.11.0",
     "pug": "2.0.0-beta11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
   }
 }

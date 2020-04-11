@@ -5,12 +5,9 @@ async function getPatients (req, res, next) {
   const location = { latitude, longitude};
   try {
     const patients = await getPatientByDistance(radius, location);
-    console.log('GOT THE RESPONSE, SENDING: ')
-    console.log(patients);
     res.send(patients);
   } catch (e) {
-    next(e); // caught by error handler status 500 middleware
-    //TODO add error handling for different status codes
+    next(e); 
   }
 }
 
@@ -21,8 +18,7 @@ async function addPatient (req, res, next) {
     await savePatient(patient);
     res.send(patient);
   } catch (e) {
-    next(e); // caught by error handler status 500 middleware
-    //TODO add error handling for different status codes
+    next(e);
   }
 }
 

@@ -1,9 +1,6 @@
 const modelPatient = require('../models/patients');
 
 async function savePatient(patient) {
-  //TODO check if patient is legit???
-  console.log(patient);
-  console.log(patient.location);
   const patientWithStatus = {
     ...patient,
     location: patient.location,
@@ -12,7 +9,6 @@ async function savePatient(patient) {
 
   const newPatient = new modelPatient.Patient(patientWithStatus);
   newPatient.save();
-  //await modelPatient.savePatient(newPatient)
 }
 
 async function getPatientByDistance(radius, patientLocation) {
@@ -21,9 +17,6 @@ async function getPatientByDistance(radius, patientLocation) {
 
 async function isBlackListed(patient) {
   const user = await modelPatient.Patient.findById(patient._id);
-  console.log('in service, user is: ');
-  console.log(user);
-
   if (user) {
     return !unblockTimePasses(user)
   }
@@ -32,8 +25,6 @@ async function isBlackListed(patient) {
 }
 
 function unblockTimePasses(user) {
-  console.log(`user.unblockTim: ${user.unblockTime}`)
-  console.log(`curr time: ${Date.now()}`);
   return user.unblockTime < Date.now();
 }
 
